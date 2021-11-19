@@ -1,0 +1,67 @@
+engine/pieces/King.java
+ engine.pieces.King
+GUI/Table.java
+ GUI.Table
+engine/player/MoveTransition.java
+ engine.player.MoveTransition
+engine/chessBoard/Move.java
+ engine.chessBoard.Move
+ engine.chessBoard.Move$AttackMove
+ engine.chessBoard.Move$CastleMove
+ engine.chessBoard.Move$KingSideCastleMove
+ engine.chessBoard.Move$MajorMove
+ engine.chessBoard.Move$MoveFactory
+ engine.chessBoard.Move$NullMove
+ engine.chessBoard.Move$PawnAttackMove
+ engine.chessBoard.Move$PawnEnPassantAttackMove
+ engine.chessBoard.Move$PawnJump
+ engine.chessBoard.Move$QueenSideCastleMove
+engine/chessBoard/Menu.java
+ engine.chessBoard.Menu
+ engine.chessBoard.Menu$1
+ engine.chessBoard.Menu$2
+engine/setting/Alliance.java
+ engine.setting.Alliance
+ engine.setting.Alliance$1
+ engine.setting.Alliance$2
+engine/player/WhitePlayer.java
+ engine.player.WhitePlayer
+engine/chessBoard/Board.java
+ engine.chessBoard.Board
+ engine.chessBoard.Board$Builder
+engine/pieces/Bishop.java
+ engine.pieces.Bishop
+engine/player/MoveStatus.java
+ engine.player.MoveStatus
+ engine.player.MoveStatus$1
+ engine.player.MoveStatus$2
+ engine.player.MoveStatus$3
+engine/pieces/Piece.java
+ engine.pieces.Piece
+ engine.pieces.Piece$PieceType
+ engine.pieces.Piece$PieceType$1
+ engine.pieces.Piece$PieceType$2
+ engine.pieces.Piece$PieceType$3
+ engine.pieces.Piece$PieceType$4
+ engine.pieces.Piece$PieceType$5
+ engine.pieces.Piece$PieceType$6
+engine/player/BlackPlayer.java
+ engine.player.BlackPlayer
+engine/pieces/Pawn.java
+ engine.pieces.Pawn
+engine/pieces/Knight.java
+ engine.pieces.Knight
+engine/player/Player.java
+ engine.player.Player
+engine/pieces/Rook.java
+ engine.pieces.Rook
+engine/pieces/Queen.java
+ engine.pieces.Queen
+engine/chessBoard/BoardUtils.java
+ engine.chessBoard.BoardUtils
+engine/chessBoard/Tile.java
+ engine.chessBoard.Tile
+ engine.chessBoard.Tile$EmptyTile
+ engine.chessBoard.Tile$OccupiedTile
+JChess.java
+ JChess
