@@ -1,5 +1,5 @@
 import { dbService, strageService } from 'fbase';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
 
 const Nweet=({nweetObj, isOwner})=>{
@@ -9,7 +9,7 @@ const Nweet=({nweetObj, isOwner})=>{
         const ok= window.confirm("Are you sure you want to delete this nweet?");
         if(ok){
             await dbService.doc(`nweets/${nweetObj.id}`).delete();
-            await strageService.refFromURL(nweetObj.attachmentUrl).delete();
+            await strageService.refFromURL(nweetObj.attachmentUrl).delete(); 
         }
     };
     const onSubmit=async(event)=>{
@@ -20,6 +20,7 @@ const Nweet=({nweetObj, isOwner})=>{
         });
         setEditing(false);
     };
+    
     const onChange=(event)=>{
         event.preventDefault();
         setNewNweet(event.target.value);
