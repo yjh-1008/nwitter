@@ -15,7 +15,8 @@ function App() {
           updateProfile:(args)=>user.updateProfile(args),
         });
       }else{
-        setIsLoggedIn(false);
+        setUserObj(null);
+        //setIsLoggedIn(false);
       }
       setInit(true);
     }
@@ -30,14 +31,13 @@ function App() {
     });
   };
   return (
-    <>
-      
+    <div>
         {init?<AppRouter
         refreshUser={refreshUser}
          isLoggedIn={Boolean(userObj)}
-          userObj={userObj}/>:"initializing"}<br></br>
+        userObj={userObj}/>:"initializing"}<br></br>
         
-    </>
+    </div>
   );
 }
 
