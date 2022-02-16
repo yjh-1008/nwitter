@@ -1,0 +1,47 @@
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <signal.h>
+int main(){
+	char commands[100];
+	scanf("%[^\n]s",commands);
+	char *sArr[100]={NULL,};
+	int i=0;
+	char *ptr=strtok(commands," ");
+	while(ptr!=NULL)
+	{
+		sArr[i]=ptr;
+		i++;
+		ptr=strtok(NULL," ");
+	}
+	int size= strlen(sArr[0]);
+	char cmd1[size];
+	strcpy(cmd1,sArr[0]);
+	int amper=0;
+	if(cmd1[size-1]=='&'){
+		amper=1;
+	}
+	int pid;
+	if((pid=fork())==0){
+		if(strcmp(sArr[1],">")==0){
+			int fd, status;
+			fd=open(sArr[2],O_CREAT|O_TRUNC|O_WRONLY,0777);
+			dup2(fd,1);
+			close(fd);
+			
+	
+			printf("redirect\n");
+		}else if(strcmp(sArr[1],">")==0){
+			printf("redirect\n");
+		}
+
+	}else if(pid>0){
+	
+	}else{
+		
+	}
+	return 0;
+}
