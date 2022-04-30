@@ -1,0 +1,16 @@
+<!-- wf2-2-27.html -->
+<script>
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {  // 요청에 대한 callback
+    if (xhr.readyState === xhr.DONE) {  // 요청이 완료되면
+      if (xhr.status === 200 || xhr.status === 201) { // 응답코드가 200 또는 201이면
+         console.log(xhr.responseText);
+      }
+      else {
+        console.log(xhr.responseText);
+      }
+    }
+  };
+  xhr.open('GET', 'https://www.zerocho.com/api/get'); // 메서드와 주소 설정
+  xhr.send(); // 요청 전송
+</script>
