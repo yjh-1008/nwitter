@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CanvasContext } from "../CanvasContainer";
+import { CanvasContext } from "./CanvasContainer";
 
 export const sizeList = [
   "8px",
