@@ -1,0 +1,12 @@
+<h1>home</h1><br>
+
+{% if user.is_authenticated %}
+    {% if user.profile.belong == 0 %}
+    <a>안녕하세요, {{ user.profile.name }}님 (점주) </a>
+    {% elif user.profile.belong == 1 %}
+    <a>안녕하세요, {{ user.profile.name }}님 (고객) </a>
+    {% endif %}
+<a href="{% url 'logout' %}">로그아웃</a>
+{% else %}
+<a href="{% url 'login' %}">로그인하세요</a>
+{% endif %}
