@@ -1,0 +1,57 @@
+{{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="movieuploadStyle.css"/> -->
+    <link rel="stylesheet" href="{% static 'css/movieuploadStyle.css' %}">
+</head>
+
+<body>
+
+    <div class="logo">
+        CHOO:OOM
+    </div>
+
+    <form action="{% url 'postcreate' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <section>
+        <div>
+            <div class="title">Title</div>
+            {{ form.title }}
+            <!-- <input class="input-title" type="text"> -->
+        </div>
+
+        <div>
+            <div class="intro">Introduction</div>
+            {{ form.body }}
+            <!-- <textarea class="input-intro" cols="20" rows="5"></textarea> -->
+        </div>
+
+        <div class="image">Main Image
+            <label class="upload-img" for="imagefile">
+                <div>파일 선택</div>
+            </label>
+            {{ form.photo }}
+            <!-- <input type="file" name="imagefile" id="imagefile"> -->
+        </div>
+
+        <div class="video">Video
+            <label class="upload-video" for="videofile">
+                <div>파일 선택</div>
+            </label>
+            {{ form.video }}
+            <!-- <input type="file" name="videofile" id="videofile"> -->
+        </div>
+        <div class="genre">Genre
+            <label for="id_genreName" style="color: black; font-size: large;">
+            </label>
+            {{ form.genreName }}
+        </div>
+        <input type="submit" name="" id="" class="button" value="Upload">
+    </section>
+    </form>
+</body>
